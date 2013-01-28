@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/3.4">
+	<id>com.impulse12.p4cm4n</id>
+	<filename>P4cM4n</filename>
+	<name>P4cM4n</name>
+	<versionNumber>1.0.3</versionNumber>
+	<initialWindow>
+		<content>NotPacman.swf</content>
+        <visible>true</visible>
+        <aspectRatio>landscape</aspectRatio>
+		<autoOrients>false</autoOrients>
+        <fullScreen>true</fullScreen>
+        <renderMode>gpu</renderMode>
+    </initialWindow>
+	<icon>
+		<image16x16>icons/icon_16.png</image16x16>
+		<image32x32>icons/icon_32.png</image32x32>
+		<image36x36>icons/icon_36.png</image36x36>
+		<image48x48>icons/icon_48.png</image48x48>
+		<image57x57>icons/icon_57.png</image57x57>
+		<image72x72>icons/icon_72.png</image72x72>
+		<image114x114>icons/icon_114.png</image114x114>
+		<image128x128>icons/icon_128.png</image128x128>
+	</icon>
+	<android>
+        <manifestAdditions><![CDATA[
+		    <manifest android:installLocation="auto">
+		        <uses-sdk android:targetSdkVersion="11"/>
+				<uses-sdk android:minSdkVersion="8"/>
+				<uses-permission android:name="android.permission.INTERNET"/>
+				<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+				<application>
+					<activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation"/>
+				</application>
+			</manifest>
+		]]></manifestAdditions>
+    </android>
+    <iPhone>
+        <InfoAdditions><![CDATA[
+			<key>UIDeviceFamily</key>
+			<array>
+				<string>1</string>
+				<string>2</string>
+			</array>
+		]]></InfoAdditions>
+        <requestedDisplayResolution>high</requestedDisplayResolution>
+    </iPhone>
+	<extensions>
+	    <extensionID>de.ketzler.eulergyroscope</extensionID>
+    </extensions>
+</application>
